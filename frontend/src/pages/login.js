@@ -23,7 +23,7 @@ export const LoginPage = () => {
     webAuth.client.login(
       {
         realm: "spa-db",
-        username: "agaev.vladimir2@gmail.com",
+        username: "agaev.vladimir4@gmail.com",
         password: "KofD28giIAxEF6y",
       },
       (err, res) => {
@@ -36,10 +36,13 @@ export const LoginPage = () => {
   function handleLocalSignup(e) {
     e.preventDefault();
 
-    webAuth.signup(
+    console.log(webAuth);
+    console.log(webAuth.client);
+
+    webAuth.signupAndAuthorize(
       {
         connection: "spa-db",
-        email: "agaev.vladimir2@gmail.com",
+        email: "agaev.vladimir4@gmail.com",
         password: "KofD28giIAxEF6y",
       },
       (err, res) => {
